@@ -14,15 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
+// route home
 Route::get('/', function(){
 
-    $data = [
+    $data =
+    [
         'name' => 'pippo',
         'lastname' => 'pluto'
     ];
 
-    return view('home', $data);
-});
+    $link =
+    [
+        'link_about' => 'http://127.0.0.1:8000/about'
+    ];
+
+    return view('home', $data, $link);
+})->name('homepage');
 
 
+
+// route about
+Route::get('/about', function(){
+    return view('about');
+})->name('aboutpage');
