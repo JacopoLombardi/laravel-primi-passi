@@ -14,6 +14,7 @@
 
     <div class="container  text-center  mt-5">
         <h1>Hello Laravel</h1>
+        <h3>ciao {{$name}} {{$lastname}} </h3>
     </div>
 
 
